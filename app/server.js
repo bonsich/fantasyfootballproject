@@ -62,6 +62,10 @@ app.post("/log_in", async (req, res) => {
         console.log("Missing Username/Password");
         return res.status(400).send("Missing Username/Password");
     }
+    if (req.session.user){
+        console.log("Already Logged In");
+        return res.status(400).send("Already Logged In.");
+    }
     const user = usersDatabase.find(user => user.username === body.username);
     
     if(!user){
@@ -83,10 +87,11 @@ app.post("/log_in", async (req, res) => {
 })
 
 app.get("/create_league", hasValidSession, (req, res) => {
-    console.log("Create League Accessed");
+    console.log("Create League Accessed as " + req.session.user.username + "!");
 });
 
 // Usable as such app.get(..., hasValidSession, (req,res) => {})
+// req.session.user has information
 function hasValidSession (req,res,next) {
     if (req.session && req.session.user){
         return next();
