@@ -40,6 +40,34 @@ app.post("/sign_up", async (req, res) => {
     console.log(usersDatabase);
 });
 
+app.post("/log_in", async (req, res) => {
+    let body = req.body;
+    if (
+        !body.hasOwnProperty("username") ||
+        !body.hasOwnProperty("password") ||
+        body.username === "" ||
+        body.password === ""
+    ) {
+        console.log("Missing Username/Password");
+        return res.status(400).send("Missing Username/Password");
+    }
+    const user = usersDatabase.find(user => user.username === body.username);
+    
+    if(!user){
+        console.log("Username Doesn't Exist");
+        return res.status(400).send("Username Doesn't Exist");
+    }
+
+    let isMatch = await bcrypt.compare(body.password, user.password);
+    if (isMatch){
+        console.log("Successfull Log In");
+        return res.status(200).send("Login Successful! Welcome Back!");
+    } else{
+        console.log("Invalid Password");
+        res.status(400).send("Invalid Username/Password.");
+    }
+})
+
 app.listen(port, hostname, () => {
   console.log(`http://${hostname}:${port}`);
 });
