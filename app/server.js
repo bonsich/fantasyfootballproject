@@ -1,6 +1,7 @@
 let express = require("express");
 let env = require("../env.json");
 let bcrypt = require('bcrypt');
+let session = require("express-session");
 let hostname = "localhost";
 let port = 3000;
 let app = express();
@@ -13,6 +14,16 @@ console.log(newId);
 
 app.use(express.json());
 app.use(express.static("public"));
+app.use(session({
+    secret: "GSIAJDBANEJKSI",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        httpOnly: true,
+        secure: false,
+        maxAge: 1000 * 60 * 60 * 24
+    }
+}));
 
 const usersDatabase = [];
 
@@ -61,12 +72,27 @@ app.post("/log_in", async (req, res) => {
     let isMatch = await bcrypt.compare(body.password, user.password);
     if (isMatch){
         console.log("Successfull Log In");
+        req.session.user = {
+            username: user.username
+        };
         return res.status(200).send("Login Successful! Welcome Back!");
     } else{
         console.log("Invalid Password");
         res.status(400).send("Invalid Username/Password.");
     }
 })
+
+app.get("/create_league", hasValidSession, (req, res) => {
+    console.log("Create League Accessed");
+});
+
+// Usable as such app.get(..., hasValidSession, (req,res) => {})
+function hasValidSession (req,res,next) {
+    if (req.session && req.session.user){
+        return next();
+    }
+    return res.status(400).send("Log in to access this page");
+}
 
 app.listen(port, hostname, () => {
   console.log(`http://${hostname}:${port}`);

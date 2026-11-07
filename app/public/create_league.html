@@ -20,6 +20,13 @@
   </select>
 </div>
 <script>
+    async function verifyLogIn(){
+        let response = await fetch("/create_league");
+        let data = await response.text();
+        console.log(data);
+    }
+    verifyLogIn();
+
 </script>
 
 </body>
