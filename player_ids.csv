@@ -47,7 +47,7 @@ espn_id,sleeper_name,sleeper_position,team
 9709,"Domata Peko",DT,FA
 8544,"Darren Sproles",RB,FA
 8362,"Don Muhlbach",LS,FA
-11394,"Josh Johnson",QB,CIN
+11394,"Josh Johnson",QB,ARI
 11366,"Orlando Scandrick",CB,FA
 8416,"Alex Smith",QB,FA
 9761,"Delanie Walker",TE,FA
@@ -134,7 +134,7 @@ espn_id,sleeper_name,sleeper_position,team
 13217,"Golden Tate",WR,FA
 13251,"Earl Thomas",FS,FA
 8495,"Richie Incognito",G,FA
-10621,"Nick Folk",K,ATL
+10621,"Nick Folk",K,FA
 8461,"Mike Nugent",K,FA
 5557,"Benjamin Watson",TE,FA
 12895,"Steve McLendon",DT,FA
@@ -1722,7 +1722,7 @@ espn_id,sleeper_name,sleeper_position,team
 2976259,"Nate Hairston",CB,FA
 3045251,"Anthony Walker",LB,FA
 2969922,"Ukeme Eligwe",LB,FA
-3115383,"Davon Godchaux",DT,NO
+3115383,"Davon Godchaux",DT,JAX
 3059918,"Rodney Adams",WR,FA
 2969959,"Danny Isidora",OL,FA
 2974324,"Avery Moss",DE,FA
@@ -2330,7 +2330,7 @@ espn_id,sleeper_name,sleeper_position,team
 3040008,"Joseph Noteboom",OL,FA
 3121416,"Sam Hubbard",DE,FA
 3821576,"Malik Jefferson",LB,FA
-3919512,"Jessie Bates III",DB,ATL
+3919512,"Jessie Bates III",DB,JAX
 3042516,"Will Hernandez",G,FA
 3123045,"Chad Thomas",DE,FA
 3116748,"B.J. Hill",DT,CIN
@@ -3098,7 +3098,7 @@ espn_id,sleeper_name,sleeper_position,team
 3122766,"Jaylon Ferguson",LB,FA
 3121410,"Parris Campbell",WR,FA
 3912028,"Nasir Adderley",DB,FA
-4039007,"Taylor Rapp",DB,FA
+4039007,"Taylor Rapp",DB,DEN
 4240780,"Lonnie Johnson",DB,FA
 4036163,"Kelvin Harmon",WR,FA
 3042876,"Ryan Finley",QB,FA
