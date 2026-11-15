@@ -86,7 +86,18 @@ app.post("/log_in", async (req, res) => {
     }
 })
 
-app.get("/create_league", hasValidSession, (req, res) => {
+app.post("/create_league", hasValidSession, (req, res) => {
+    let body = req.body;
+    if (
+        !body.hasOwnProperty("leagueName") ||
+        !body.hasOwnProperty("leagueType") ||
+        body.leagueName === ""
+    ) {
+        return res.status(400).send("Missing League Name/Type");
+    }
+    if (body.leagueType != "totalPoints" && body.leagueType != "h2h"){
+        return res.status(400).send("Please choose a valid league type.")
+    }
     console.log("Create League Accessed as " + req.session.user.username + "!");
     return res.sendStatus(200);
 });

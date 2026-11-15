@@ -28,7 +28,15 @@
     let button = document.getElementById("submit");
     let message = document.getElementById("message");
     async function submitPressed(){
-        let response = await fetch("/create_league");
+        let leagueNameInput = document.getElementById("leagueName");
+        let leagueTypeInput = document.getElementById("leagueType");
+        let response = await fetch("/create_league", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body:JSON.stringify({leagueName: leagueNameInput.value, leagueType: leagueTypeInput.value})
+          });
         let data = await response.text();
         console.log(response.status);
         if (!response.ok){
