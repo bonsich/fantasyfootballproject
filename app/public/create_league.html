@@ -9,7 +9,7 @@
 <p>You made it to the create league page</p>
 <div>
   <label for="leagueName">League Name:</label>
-  <input id="leagueName" type="text" name="name">
+  <input id="leagueName" type="text" name="leagueName">
 </div>
 <div>
   <label for="leagueType">League Type:</label>
@@ -20,13 +20,26 @@
   </select>
 </div>
 <div><button id="submit">Submit League</button></div>
+<div id="message"></div>
 <script>
-    async function verifyLogIn(){
+    let button = document.getElementById("submit");
+    let message = document.getElementById("message");
+    async function submitPressed(){
         let response = await fetch("/create_league");
         let data = await response.text();
+        console.log(response.status);
+        if (!response.ok){
+          message.style.color = "red";
+          message.textContent = data;
+        }else{
+          message.style.color = "black";
+          message.textContent = "You successfully created a league";
+          console.log(response.status);
+        }
         console.log(data);
+
     }
-    verifyLogIn();
+    button.addEventListener("click", submitPressed)
 
 </script>
 

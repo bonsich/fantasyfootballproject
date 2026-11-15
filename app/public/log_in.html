@@ -8,30 +8,36 @@
 
 <p>Log In:</p>
 
-<div>
-  <label for="username">Username:</label>
-  <input id="username" type="text" name="userame">
-</div>
-<div>
-  <label for="password">Password:</label>
-  <input id="password" type="text" name="password">
-</div>
+<form id="log_in">
+  <div>
+    <label for="username">Username:</label>
+    <input id="username" type="text" name="username" autocomplete="username">
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input id="password" type="password" name="password" autocomplete="current-password">
+  </div>
 
-<button id="submit">Submit</button>
+  <button id="submit">Submit</button>
+  </form>
+
+<div id="message"></div>
 
 <script>
 let button = document.getElementById("submit");
-
-function submitPressed(){
+let message = document.getElementById("message");
+async function submitPressed(){
+  event.preventDefault();
   let usernameInput = document.getElementById("username");
   let passwordInput = document.getElementById("password");
-  fetch("/log_in", {
+  let response = await fetch("/log_in", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
     body:JSON.stringify({username: usernameInput.value, password: passwordInput.value})
     });
+    message.textContent = await response.text();
 }
 button.addEventListener("click", submitPressed)
 </script>

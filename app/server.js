@@ -88,6 +88,7 @@ app.post("/log_in", async (req, res) => {
 
 app.get("/create_league", hasValidSession, (req, res) => {
     console.log("Create League Accessed as " + req.session.user.username + "!");
+    return res.sendStatus(200);
 });
 
 // Usable as such app.get(..., hasValidSession, (req,res) => {})
@@ -96,7 +97,7 @@ function hasValidSession (req,res,next) {
     if (req.session && req.session.user){
         return next();
     }
-    return res.status(400).send("Log in to access this page");
+    return res.status(400).send("Need to Log In");
 }
 
 app.listen(port, hostname, () => {
