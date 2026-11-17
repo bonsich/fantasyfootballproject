@@ -282,7 +282,7 @@ espn_id,sleeper_name,sleeper_position,team
 14912,"Alshon Jeffery",WR,FA
 14930,"Riley Reiff",T,FA
 15070,"Tahir Whitehead",LB,FA
-14880,"Kirk Cousins",QB,LV
+14880,"Kirk Cousins",QB,MIN
 14875,"Robert Griffin",QB,FA
 15009,"Alfred Morris",RB,FA
 14994,"Mike Daniels",DT,CIN
@@ -391,7 +391,7 @@ espn_id,sleeper_name,sleeper_position,team
 15794,"D.J. Hayden",CB,WAS
 15906,"Stacy McGee",DT,FA
 15920,"Latavius Murray",RB,FA
-15818,"Keenan Allen",WR,IND
+15818,"Keenan Allen",WR,SF
 15792,"D.J. Fluker",T,FA
 15867,"Manti Te'o",LB,FA
 15793,"Travis Frederick",C,FA
@@ -725,7 +725,7 @@ espn_id,sleeper_name,sleeper_position,team
 2972460,"Breshad Perriman",WR,FA
 2513035,"Byron Jones",CB,FA
 2512477,"Laken Tomlinson",OL,GB
-2579604,"Phillip Dorsett II",WR,FA
+2579604,"Phillip Dorsett",WR,ARI
 3043258,"Damarious Randall",CB,FA
 2576482,"Stephone Anthony",LB,FA
 2971698,"Malcom Brown",DT,FA
@@ -1745,7 +1745,7 @@ espn_id,sleeper_name,sleeper_position,team
 2972331,"Mason Schreck",TE,FA
 2982632,"Brandon Wilson",DB,FA
 3054950,"Caleb Brantley",DE,FA
-3043234,"Zane Gonzalez",K,MIA
+3043234,"Zane Gonzalez",K,FA
 3121409,"Noah Brown",WR,FA
 3895487,"Jordan Carrell",DT,FA
 3043112,"Joey Ivie",DT,FA
@@ -2019,7 +2019,7 @@ espn_id,sleeper_name,sleeper_position,team
 3049574,"Kennan Gilchrist",OLB,FA
 2991767,"Blake Jarwin",TE,FA
 2974344,"Joe Jones",LB,FA
-2972515,"Cooper Rush",QB,FA
+2972515,"Cooper Rush",QB,TB
 2613168,"Nate Theaker",G,FA
 2976185,"Lucas Wacha",OLB,FA
 2977231,"Erik Austell",G,FA
@@ -2775,7 +2775,7 @@ espn_id,sleeper_name,sleeper_position,team
 3914861,"Frank Ginda",OLB,FA
 2987188,"Mike Needham",LB,FA
 4039221,"Elijah Battle",CB,FA
-4334405,"Tavierre Thomas",DB,MIN
+4334405,"Tavierre Thomas",DB,NYG
 4331768,"Jonathan Owens",DB,IND
 3059941,"Brant Weiss",OT,FA
 3139339,"Owen Obasuyi",DE,FA
@@ -3064,7 +3064,7 @@ espn_id,sleeper_name,sleeper_position,team
 4036133,"T.J. Hockenson",TE,MIN
 4047650,"DK Metcalf",WR,PIT
 4035483,"Dexter Lawrence II",DT,CIN
-4241372,"Marquise Brown",WR,PHI
+4241372,"Marquise Brown",WR,FA
 3917315,"Kyler Murray",QB,MIN
 4047365,"Josh Jacobs",RB,GB
 4034967,"Jachai Polite",LB,FA
@@ -3085,7 +3085,7 @@ espn_id,sleeper_name,sleeper_position,team
 3859100,"Deionte Thompson",DB,FA
 3125082,"Dalton Risner",G,CIN
 4047661,"Greg Little",T,FA
-4040622,"Michael Jordan",G,BAL
+4040622,"Michael Jordan",G,FA
 3917792,"Daniel Jones",QB,IND
 3915282,"Zach Allen",DE,DEN
 3126486,"Deebo Samuel Sr.",WR,SF
@@ -3124,7 +3124,7 @@ espn_id,sleeper_name,sleeper_position,team
 4046719,"Justin Layne",CB,FA
 3930086,"Dawson Knox",TE,BUF
 4034945,"Vosean Joseph",OLB,FA
-4036134,"Amani Hooker",DB,TEN
+4036134,"Amani Hooker",DB,BUF
 4035311,"Hamp Cheevers",CB,FA
 4037650,"Ben Powers",G,DEN
 3115328,"Jalen Hurd",WR,FA
@@ -3235,7 +3235,7 @@ espn_id,sleeper_name,sleeper_position,team
 3843406,"Nick Brossette",RB,FA
 3691031,"Javon Patterson",OL,FA
 3912545,"Iman Marshall",CB,FA
-3915106,"Fred Johnson",T,PHI
+3915106,"Fred Johnson",T,FA
 3917853,"Mike Jackson",CB,CAR
 3728248,"Albert Huggins",DT,FA
 3116134,"Nate Hall",LB,FA
@@ -3247,14 +3247,14 @@ espn_id,sleeper_name,sleeper_position,team
 4241451,"Isaiah Buggs",DE,FA
 3126245,"Donnie Lewis",CB,DEN
 3916946,"Ryan Davis",WR,FA
-3722362,"Brett Rypien",QB,FA
+3722362,"Brett Rypien",QB,LV
 3128311,"Damian Prince",OT,FA
 3915411,"Ty Johnson",RB,BUF
 3916564,"Tyree Jackson",TE,FA
 3929849,"Davante Davis",CB,FA
 4037633,"Amani Bledsoe",DE,FA
 3129290,"Alex Bars",OL,FA
-3916071,"Gary Jennings",WR,LAC
+3916071,"Gary Jennings",WR,FA
 3133361,"Joe Dineen",ILB,FA
 4038938,"Dillon Mitchell",WR,FA
 3917316,"Daylon Mack",DT,FA
@@ -3403,7 +3403,7 @@ espn_id,sleeper_name,sleeper_position,team
 4411189,"Trey Pipkins III",T,LAC
 3110565,"Quincy Williams",LB,CLE
 3128263,"Wes Martin",G,FA
-3886834,"Ugo Amadi",DB,DEN
+3886834,"Ugo Amadi",DB,FA
 3728281,"Blake Cashman",LB,MIN
 3071353,"E.J. Speed",LB,HOU
 3821683,"Austin Seibert",K,FA
@@ -3943,7 +3943,7 @@ espn_id,sleeper_name,sleeper_position,team
 4039050,"Devin Duvernay",WR,ARI
 3925350,"Anfernee Jennings",LB,NO
 4035403,"Denzel Mims",WR,FA
-4040774,"Harrison Bryant",TE,FA
+4040774,"Harrison Bryant",TE,IND
 4046690,"Julian Okwara",LB,FA
 3886808,"Trey Adams",OT,FA
 3930066,"Van Jefferson",WR,WAS
@@ -4089,7 +4089,7 @@ espn_id,sleeper_name,sleeper_position,team
 4046715,"Trishton Jackson",WR,FA
 3915147,"Calvin Throckmorton",OL,DEN
 4034766,"Carter Coughlin",LB,FA
-4243009,"Mykal Walker",LB,FA
+4243009,"Mykal Walker",LB,NYJ
 3915436,"Steven Montez",QB,FA
 4036507,"Joe Bachie",LB,DET
 3915136,"Jacob Breeland",TE,FA
@@ -4139,7 +4139,7 @@ espn_id,sleeper_name,sleeper_position,team
 4039413,"Alohi Gilman",DB,KC
 4035020,"Charlie Woerner",TE,ATL
 4240626,"Jeff Thomas",WR,FA
-3925443,"Jacob Bobenmoyer",LS,FA
+3925443,"Jacob Bobenmoyer",LS,IND
 3915821,"Tony Brown",WR,FA
 4262315,"Pete Guerriero",RB,FA
 3917166,"Omar Bayless",WR,FA
@@ -4297,7 +4297,7 @@ espn_id,sleeper_name,sleeper_position,team
 4611135,"Carter O'Donnell",T,FA
 4041572,"Kameron Cline",DE,FA
 4037135,"Kendall Coleman",DE,FA
-4034530,"Chris Williams",DT,FA
+4034530,"Chris Williams",DT,LV
 4363929,"Travis Reed",CB,FA
 3928847,"Donald Rutledge",LB,ARI
 3939146,"Marvelle Ross",WR,FA
