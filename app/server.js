@@ -1,18 +1,47 @@
-let express = require("express");
-let env = require("../env.json");
+const http = require('http');
+const fs = require('fs');
+const path = require('path');
 
-let hostname = "localhost";
-let port = 3000;
-let app = express();
+const hostname = process.env.HOST || '127.0.0.1';
+const port = Number(process.env.PORT) || 3000;
+const publicDirectory = path.join(__dirname, 'public');
+const contentTypes = {
+  '.css': 'text/css; charset=utf-8',
+  '.html': 'text/html; charset=utf-8',
+  '.js': 'text/javascript; charset=utf-8',
+  '.json': 'application/json; charset=utf-8',
+  '.svg': 'image/svg+xml',
+};
 
-const { v4: uuidv4 } = require('uuid');
+const server = http.createServer((request, response) => {
+  let pathname;
+  try {
+    pathname = decodeURIComponent(new URL(request.url, `http://${request.headers.host}`).pathname);
+  } catch {
+    response.writeHead(400).end('Bad request');
+    return;
+  }
 
-const newId = uuidv4();
-console.log(newId);
+  const relativePath = pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, '');
+  const filePath = path.resolve(publicDirectory, relativePath);
+  if (filePath !== publicDirectory && !filePath.startsWith(`${publicDirectory}${path.sep}`)) {
+    response.writeHead(403).end('Forbidden');
+    return;
+  }
 
-app.use(express.json());
-app.use(express.static("public"));
+  fs.readFile(filePath, (error, contents) => {
+    if (error) {
+      response.writeHead(error.code === 'ENOENT' ? 404 : 500).end('Not found');
+      return;
+    }
+    response.writeHead(200, {
+      'Content-Type': contentTypes[path.extname(filePath)] || 'application/octet-stream',
+      'X-Content-Type-Options': 'nosniff',
+    });
+    response.end(contents);
+  });
+});
 
-app.listen(port, hostname, () => {
-  console.log(`http://${hostname}:${port}`);
+server.listen(port, hostname, () => {
+  console.log(`Cache Money is available at http://${hostname}:${port}`);
 });
