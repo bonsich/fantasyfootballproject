@@ -1,3 +1,5 @@
 node_modules/
 .env
 cron.log
+parsed_stats.txt
+games_info.json
