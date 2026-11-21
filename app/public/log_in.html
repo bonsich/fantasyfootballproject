@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Log In</title>
+    <a href="index.html">Home</a>
+    <a href="sign_up.html">Sign Up</a>
+    <a href="log_in.html">Log In</a>
+</head>
+<body>
+
+<p>Log In:</p>
+
+<form id="log_in">
+  <div>
+    <label for="username">Username:</label>
+    <input id="username" type="text" name="username" autocomplete="username">
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input id="password" type="password" name="password" autocomplete="current-password">
+  </div>
+
+  <button id="submit">Submit</button>
+  </form>
+
+<div id="message"></div>
+
+<script>
+let button = document.getElementById("submit");
+let message = document.getElementById("message");
+async function submitPressed(){
+  event.preventDefault();
+  let usernameInput = document.getElementById("username");
+  let passwordInput = document.getElementById("password");
+  let response = await fetch("/log_in", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body:JSON.stringify({username: usernameInput.value, password: passwordInput.value})
+    });
+    message.textContent = await response.text();
+}
+button.addEventListener("click", submitPressed)
+</script>
+
+</body>
+</html>
